@@ -1,0 +1,28 @@
+Saving Data from Shell Scripting USB Serial Communication
+
+1)	Start by checking for the USB serial port through the command: - 
+ls /dev/tty.* (in Mac)
+Device Manager → Ports (COM & LPT) (You will see the ports) (in Windows) , check for baud rate.
+
+2)	Let the port path be /dev/tty.usbmodemxxxxx then start serial communication 
+And the baud rate to be 9600 (eg)
+screen /dev/tty.usbmodemxxxxx 9600 (in Mac)
+Download puTTY from (https://www.putty.org), Use connection type Serial
+Refer https://youtu.be/0ptZPTTwRaE?si=U2ajCvl6CMnhFPia for installation 
+In puTTY -> Session -> Logging choose 1 from session logging section, select file name/address, Then click open.
+                 You would get your data or the menu required displayed here & Directly Save here (Only for Windows it ends here)
+3)	Start logging the data in the screen by Ctrl + A then H will show a popup that it being save to some filo.0 (Mac)
+
+4)	View your data, let it loop for time required, to stop loop use Ctrl + A then k we would get a popup to exit it by y (yes) (Mac)
+
+5)	Exit the screen Ctrl + C (Mac)
+
+6)	Check for the file file.0 by command: - (Mac)
+ls
+7)	If required change file type (example .txt) by command: - (Mac)
+mv file.0 file.txt
+8)	If required process the data (remove repeated unwanted parts) in it by some python code. 
+
+
+
+
